@@ -113,6 +113,8 @@ jobs:
       run: |
         cd openwrt
         find package/qca/ -name "Makefile" -exec sed -i 's/https:\/\/source.codeaurora.org\/quic/https:\/\/git.codelinaro.org\/clo/g' {} \;
+#       find package/lean/shortcut-fe/simulated-driver/ -name "Makefile" -exec sed -i 's/https:\/\/source.codeaurora.org\/quic/https:\/\/git.codelinaro.org\/clo/g' {} \;
+#       cancel by cliffman, no need to install that driver, it slows eth speed
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j2 || make -j2 V=s
         echo "status=success" >> $GITHUB_OUTPUT
