@@ -35,7 +35,7 @@ git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dns
 
 #添加额外软件包
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
-# Modify default IP cliffman
+# cliffman
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
