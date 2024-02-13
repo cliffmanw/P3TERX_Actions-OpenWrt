@@ -42,3 +42,7 @@ A template for building OpenWrt with GitHub Actions
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
+
+memo:
+(not applyed)coremark: allow to build with multithrading support
+https://scm.linefinity.com/common/openwrt-feed-packages/commit/63b8c73cf1ba6d5c786348a6aea021ebb84cc09b?style=split&whitespace=show-all&show-outdated=
