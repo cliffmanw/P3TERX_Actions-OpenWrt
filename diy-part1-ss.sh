@@ -23,4 +23,6 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 echo "src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git" >>feeds.conf.default
 echo "src-git kenwall https://github.com/kenzok8/wall.git" >>feeds.conf.default
 
+# cliffman UI DIY
+echo "src-git cliffui https://github.com/cliffmanw/openwrt_diy.git" >>feeds.conf.default
 # echo "src-git natelol https://github.com/natelol/natelol.git" >> feeds.conf.default
