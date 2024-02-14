@@ -12,6 +12,9 @@
 # Modify default IP cliffman moded
 # sed -i 's/192.168.1.1/192.168.1.10/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
+# cliffman moded
+sed -i 's/id="syslog"><%=/id="syslog" style="background-color:black;color:#99FF00;font-family:Tahoma"><%=/g' openwrt/package/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
+sed -i 's/id="syslog"><%=/id="syslog" style="background-color:black;color:#99FF00;font-family:Tahoma"><%=/g' openwrt/package/base-files/files/usr/lib/lua/luci/view/admin_status/dmesg.htm
 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
