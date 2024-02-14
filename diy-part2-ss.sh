@@ -13,14 +13,12 @@
 # sed -i 's/192.168.1.1/192.168.1.10/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
 
-#sirpdboy
-#git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
-git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
-git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
-# cliffman moded
+#sirpdboy cliffman moded not needed, as kenzok8 provideed
+# git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
+# git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
+# git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 # git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
-
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
 
@@ -32,9 +30,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
 # git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
-git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+# git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+# git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
 #添加额外软件包
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
