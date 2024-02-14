@@ -13,6 +13,7 @@
 # sed -i 's/192.168.1.1/192.168.1.10/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
 # cliffman moded
+mkdir -p package/base-files/files/usr/lib/lua/luci/view/admin_status
 cp -f feeds/cliffui/index.htm package/base-files/files/usr/lib/lua/luci/view/admin_status/index.htm
 cp -f feeds/cliffui/syslog.htm package/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
 cp -f feeds/cliffui/dmesg.htm package/base-files/files/usr/lib/lua/luci/view/admin_status/dmesg.htm
