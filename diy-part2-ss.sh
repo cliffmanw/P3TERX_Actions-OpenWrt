@@ -15,7 +15,9 @@ sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_gen
 # cliffman moded
 sed -i 's/id="syslog"><%=/id="syslog" style="background-color:black;color:#99FF00;font-family:Tahoma"><%=/g' package/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
 sed -i 's/id="syslog"><%=/id="syslog" style="background-color:black;color:#99FF00;font-family:Tahoma"><%=/g' package/base-files/files/usr/lib/lua/luci/view/admin_status/dmesg.htm
-
+sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
+sed -i "s/%D %V, %C/openwrt $(date +'%m.%d') by Cliff/g" package/base-files/files/etc/banner
+ 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
 # git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
