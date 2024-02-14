@@ -17,6 +17,9 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 # cliffman try anthor passwall feed
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo "src-git passwall https://github.com/Boos4721/OpenWrt-Packages.git" >>feeds.conf.default
+# For passwall
+# echo "src-git passwall https://github.com/Boos4721/OpenWrt-Packages.git" >>feeds.conf.default
+# For openclash
+echo "src-git passwall https://github.com/kenzok8/openwrt-packages.git" >>feeds.conf.default
 
 echo "src-git natelol https://github.com/natelol/natelol.git" >> feeds.conf.default
