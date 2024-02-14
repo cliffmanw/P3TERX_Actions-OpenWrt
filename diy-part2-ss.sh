@@ -13,8 +13,9 @@
 # sed -i 's/192.168.1.1/192.168.1.10/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
 # cliffman moded
-sed -i 's/id="syslog"><%=/id="syslog" style="background-color:black;color:#99FF00;font-family:Tahoma"><%=/g' package/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
-sed -i 's/id="syslog"><%=/id="syslog" style="background-color:black;color:#99FF00;font-family:Tahoma"><%=/g' package/base-files/files/usr/lib/lua/luci/view/admin_status/dmesg.htm
+cp -f feeds/cliffui/index.htm package/base-files/files/usr/lib/lua/luci/view/admin_status/index.htm
+cp -f feeds/cliffui/syslog.htm package/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
+cp -f feeds/cliffui/dmesg.htm package/base-files/files/usr/lib/lua/luci/view/admin_status/dmesg.htm
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/openwrt $(date +'%m.%d') by Cliff/g" package/base-files/files/etc/banner
  
