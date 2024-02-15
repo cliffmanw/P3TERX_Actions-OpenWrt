@@ -15,7 +15,8 @@ sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_gen
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/base-files/files/etc/banner
- 
+sed s/"option encryption 'none'"/"option encryption 'none'\n option disabled '1'"/g  package/base-files/files/etc/config/wireless
+
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
 # git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
