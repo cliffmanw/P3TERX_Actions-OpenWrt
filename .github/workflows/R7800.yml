@@ -110,7 +110,7 @@ jobs:
 
     - name: Make some customize
       run: |
-        cp -f /openwrt/feeds/cliffui/index.htm /openwrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+        cp -f openwrt/feeds/cliffui/index.htm openwrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
     - name: Compile the firmware
       id: compile
