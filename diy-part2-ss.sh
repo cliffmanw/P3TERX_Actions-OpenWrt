@@ -14,9 +14,9 @@
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
 # cliffman moded --try01, can't complie, error log saved. --to try02
 mkdir -p target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status
-cp -f feeds/cliffui/index.htm target/linux/ipq806x/base-files/files/usr/lib/lua/luci/view/admin_status/index.htm
-cp -f feeds/cliffui/syslog.htm target/linux/ipq806x/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
-cp -f feeds/cliffui/dmesg.htm target/linux/ipq806x/base-files/files/usr/lib/lua/luci/view/admin_status/dmesg.htm
+cp -f feeds/cliffui/index.htm target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status/index.htm
+cp -f feeds/cliffui/syslog.htm target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status/syslog.htm
+cp -f feeds/cliffui/dmesg.htm target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status/dmesg.htm
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/openwrt $(date +'%m.%d') by Cliff/g" package/base-files/files/etc/banner
  
