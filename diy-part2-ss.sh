@@ -18,7 +18,7 @@ sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_gen
 #cp -f feeds/cliffui/syslog.htm target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status/syslog.htm
 #cp -f feeds/cliffui/dmesg.htm target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status/dmesg.htm
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
-sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compile by Cliff/g" package/base-files/files/etc/banner
+sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/base-files/files/etc/banner
  
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
