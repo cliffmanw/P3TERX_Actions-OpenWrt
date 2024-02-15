@@ -12,7 +12,7 @@
 # Modify default IP cliffman moded
 # sed -i 's/192.168.1.1/192.168.1.10/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
-# cliffman moded --tested, can't complie, error log saved
+# cliffman moded --try01, can't complie, error log saved. --to try02
 mkdir -p target/linux/ipq806x/base-files/usr/lib/lua/luci/view/admin_status
 cp -f feeds/cliffui/index.htm target/linux/ipq806x/base-files/files/usr/lib/lua/luci/view/admin_status/index.htm
 cp -f feeds/cliffui/syslog.htm target/linux/ipq806x/base-files/files/usr/lib/lua/luci/view/admin_status/syslog.htm
