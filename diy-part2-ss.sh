@@ -21,6 +21,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/l
 # set wireless.radio off as default
 sed -i '/radio${devidx}.disabled=0/radio${devidx}.disabled=1/g' package/lean/default-settings/files/zzz-default-settings
 sed -i '/option disabled/d' package/lean/default-settings/files/zzz-default-settings
+cat package/lean/default-settings/files/zzz-default-settings | grep disabled
 # sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
