@@ -15,7 +15,7 @@ sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_gen
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/base-files/files/etc/banner
-sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
