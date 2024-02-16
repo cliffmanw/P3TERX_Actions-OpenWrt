@@ -65,4 +65,3 @@ git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 # git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice
 # git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
-
