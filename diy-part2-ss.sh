@@ -16,8 +16,8 @@ sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_gen
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/base-files/files/etc/banner
 # For Sing-box and hysteria
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 # set wireless.radio off as default
 sed -i 's#/set wireless.radio${devidx}.disabled/d#s/set wireless.radio${devidx}.disabled=0/set wireless.radio${devidx}.disabled=1/g#g' package/lean/default-settings/files/zzz-default-settings
 sed -i '/option disabled/d' package/lean/default-settings/files/zzz-default-settings
@@ -43,12 +43,14 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+# git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
 #添加额外软件包
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 # cliffman mod no space for openclash
-# git clone https://github.com/vernesong/OpenClash.git package/OpenClash
+git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 #git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
