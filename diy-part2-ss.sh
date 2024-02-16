@@ -21,7 +21,7 @@ sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/
 cat package/lean/default-settings/files/zzz-default-settings | grep disabled
 echo "---0"
 sed -i 's#/set wireless.radio${devidx}.disabled/d#s/set wireless.radio${devidx}.disabled=0/set wireless.radio${devidx}.disabled=1/g#g' package/lean/default-settings/files/zzz-default-settings
-sed -i 's#/etc/config/wireless#d' package/lean/default-settings/files/zzz-default-settings
+sed -i '/etc\/config\/wireless/d' package/lean/default-settings/files/zzz-default-settings
 cat package/lean/default-settings/files/zzz-default-settings | grep disabled
 echo "---1"
 cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
