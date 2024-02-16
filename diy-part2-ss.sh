@@ -19,9 +19,9 @@ sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 # set wireless.radio off as default
-sed -i '/wireless.radio/d' package/lean/default-settings/files/zzz-default-settings
+sed -i '/radio${devidx}.disabled=0/radio${devidx}.disabled=1/g' package/lean/default-settings/files/zzz-default-settings
 sed -i '/option disabled/d' package/lean/default-settings/files/zzz-default-settings
-sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
+# sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
