@@ -15,7 +15,7 @@ sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_gen
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/base-files/files/etc/banner
 
-# set wireless.radio off as default
+# set wireless.radio off as default, tested OK
 sed -i 's#/set wireless.radio${devidx}.disabled/d#s/set wireless.radio${devidx}.disabled=0/set wireless.radio${devidx}.disabled=1/g#g' package/lean/default-settings/files/zzz-default-settings
 sed -i '/etc\/config\/wireless/d' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/wireless.radio${devidx}.disabled=0/wireless.radio${devidx}.disabled=1/g'  package/kernel/mac80211/files/lib/wifi/mac80211.sh
