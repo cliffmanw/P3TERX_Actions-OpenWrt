@@ -23,8 +23,8 @@
 # echo "src-git passwall https://github.com/Boos4721/OpenWrt-Packages.git" >>feeds.conf.default
 # For openclash
 echo "src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git" >>feeds.conf.default
-echo "src-git kenwall https://github.com/kenzok8/wall.git" >>feeds.conf.default
-echo "src-git kensmall https://github.com/kenzok8/small.git" >>feeds.conf.default
+#echo "src-git kenwall https://github.com/kenzok8/wall.git" >>feeds.conf.default
+#echo "src-git kensmall https://github.com/kenzok8/small.git" >>feeds.conf.default
 echo "src-git smpackage https://github.com/kenzok8/small-package" >> feeds.conf.default
 
 # cliffman UI DIY
