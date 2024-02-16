@@ -14,9 +14,7 @@
 sed -i "s/hostname='.*'/hostname='OP'/g" package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/base-files/files/etc/banner
-# For Sing-box and hysteria and openwrt lower then 21.0
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
+
 # set wireless.radio off as default
 cat package/lean/default-settings/files/zzz-default-settings | grep disabled
 echo "---0"
@@ -40,7 +38,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 #添加额外软件包
 # Checked, author feed with depandance incomplete, by cliffman
-# git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 # git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
