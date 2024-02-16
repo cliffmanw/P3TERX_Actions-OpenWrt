@@ -19,15 +19,15 @@ sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/
 # git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 # set wireless.radio off as default
 cat package/lean/default-settings/files/zzz-default-settings | grep disabled
-echo "----"
+echo "---0"
 sed -i 's#/set wireless.radio${devidx}.disabled/d#s/set wireless.radio${devidx}.disabled=0/set wireless.radio${devidx}.disabled=1/g#g' package/lean/default-settings/files/zzz-default-settings
-sed -i '#/etc/config/wireless#d' package/lean/default-settings/files/zzz-default-settings
+sed -i 's#/etc/config/wireless#d' package/lean/default-settings/files/zzz-default-settings
 cat package/lean/default-settings/files/zzz-default-settings | grep disabled
-echo "----"
+echo "---1"
 cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
-echo "----"
+echo "---2"
 sed -i 's/wireless.radio${devidx}.disabled=0/wireless.radio${devidx}.disabled=1/g'  package/kernel/mac80211/files/lib/wifi/mac80211.sh
-echo "----"
+echo "---3"
 cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
 
 #修正连接数（by ベ七秒鱼ベ）
