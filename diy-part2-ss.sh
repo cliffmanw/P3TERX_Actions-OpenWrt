@@ -26,7 +26,7 @@ cat package/lean/default-settings/files/zzz-default-settings | grep disabled
 echo "----"
 cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
 echo "----"
-sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed s/"wireless.radio${devidx}.disabled=0/wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
 echo "----"
 cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
 
