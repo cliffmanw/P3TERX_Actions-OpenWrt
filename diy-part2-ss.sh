@@ -32,8 +32,8 @@ cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
 # themes添加（svn co 命令意思：指定版本如https://github）cliffman moded
-git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
 #添加额外软件包
