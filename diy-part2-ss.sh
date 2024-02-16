@@ -38,7 +38,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 #添加额外软件包
 # Checked, author feed with depandance incomplete, by cliffman
-# no space for: vernesong/OpenClash?
+# no space for all, setup in feeds
 # git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 # git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
