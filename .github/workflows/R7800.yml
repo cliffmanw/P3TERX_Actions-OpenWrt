@@ -82,7 +82,6 @@ jobs:
       run: |
         cd openwrt
         ./scripts/feeds install -a
-        sed -i '/bench/d' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
     - name: Load custom configuration
       run: |
