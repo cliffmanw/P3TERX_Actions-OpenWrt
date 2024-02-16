@@ -20,7 +20,8 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
 sed -i 's/disabled=0/disabled=1/g' package\base-files\files\etc\uci-defaults\99_enable_wifi
-#sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
+cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
