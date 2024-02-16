@@ -18,6 +18,8 @@ sed -i "s/%D %V, %C/OpenWrt %C $(date +'%y.%m.%d') Compiled by Cliff/g" package/
 # For Sing-box and hysteria
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
+
+sed -i 's/disabled=0/disabled=1/g' package\base-files\files\etc\uci-defaults\99_enable_wifi
 #sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #sirpdboy cliffman moded not needed, as kenzok8 provideed
@@ -37,9 +39,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
 # git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
-# git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-# git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-# git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
 #添加额外软件包
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
