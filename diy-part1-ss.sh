@@ -15,17 +15,17 @@
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-# cliffman try anthor passwall feed
-echo "src-git openclash https://github.com/vernesong/OpenClash.git" >>feeds.conf.default
-echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >>feeds.conf.default
-echo "src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git" >>feeds.conf.default
+# cliffman try anthor passwall feed, lack of depandence
+# echo "src-git openclash https://github.com/vernesong/OpenClash.git" >>feeds.conf.default
+# echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >>feeds.conf.default
+# echo "src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git" >>feeds.conf.default
 # For passwall
 # echo "src-git passwall https://github.com/Boos4721/OpenWrt-Packages.git" >>feeds.conf.default
 # For openclash
 echo "src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git" >>feeds.conf.default
-# echo "src-git kenwall https://github.com/kenzok8/wall.git" >>feeds.conf.default
-#echo "src-git kensmall https://github.com/kenzok8/small.git" >>feeds.conf.default
-#echo "src-git smpackage https://github.com/kenzok8/small-package" >> feeds.conf.default
+echo "src-git kenwall https://github.com/kenzok8/wall.git" >>feeds.conf.default
+echo "src-git kensmall https://github.com/kenzok8/small.git" >>feeds.conf.default
+echo "src-git smpackage https://github.com/kenzok8/small-package" >> feeds.conf.default
 
 # cliffman UI DIY
 echo "src-git cliffui https://github.com/cliffmanw/openwrt_diy.git" >>feeds.conf.default
