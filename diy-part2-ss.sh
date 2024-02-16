@@ -23,6 +23,8 @@ echo "----"
 sed -i 's#/set wireless.radio${devidx}.disabled/d#s/set wireless.radio${devidx}.disabled=0/set wireless.radio${devidx}.disabled=1/g#g' package/lean/default-settings/files/zzz-default-settings
 sed -i '/option disabled/d' package/lean/default-settings/files/zzz-default-settings
 cat package/lean/default-settings/files/zzz-default-settings | grep disabled
+echo "----"
+cat package/kernel/mac80211/files/lib/wifi/mac80211.sh | grep disabled
 # sed s/"wireless.radio${devidx}.disabled=0"/"wireless.radio${devidx}.disabled=1"/g  package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修正连接数（by ベ七秒鱼ベ）
