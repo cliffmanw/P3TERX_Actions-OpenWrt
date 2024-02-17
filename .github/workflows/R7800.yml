@@ -81,16 +81,20 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt
-        ./scripts/feeds install libkmod
+        ./scripts/feeds install bc
+        ./scripts/feeds install lm-sensors
         ./scripts/feeds install libpam
         ./scripts/feeds install glib2
+        ./scripts/feeds install libpcre2
+        ./scripts/feeds install pciutils
+        ./scripts/feeds install libkmod
+        
         ./scripts/feeds install liblzma
         ./scripts/feeds install libyaml-cpp
         ./scripts/feeds install libcurl
         ./scripts/feeds install libtins
         ./scripts/feeds install libnetsnmp
-        ./scripts/feeds install libpcre2
-        ./scripts/feeds install pciutils
+        
         ./scripts/feeds install libgpiod
         ./scripts/feeds install libtirpc
         ./scripts/feeds install pciids
