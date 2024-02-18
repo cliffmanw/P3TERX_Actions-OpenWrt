@@ -62,7 +62,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /mnt/workdir
         sudo ln -sf /workdir /mnt/workdir
-        sudo chown $USER:$GROUPS /workdir
         sudo chown $USER:$GROUPS /mnt/workdir
 
     - name: Clone source code
