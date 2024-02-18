@@ -61,11 +61,11 @@ jobs:
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /mnt/workdir
-        sudo ln -sf /workdir /mnt/workdir
+        sudo ln -sf /mnt/workdir /workdir
         sudo chown $USER:$GROUPS /mnt/workdir
 
     - name: Clone source code
-      working-directory: /mnt/workdir
+      working-directory: /workdir
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
